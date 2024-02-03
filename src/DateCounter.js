@@ -27,12 +27,12 @@ function DateCounter() {
   const date = new Date('june 21 2027');
   date.setDate(date.getDate() + count);
 
-  const dec = function () {
-    dispatch({ type: 'dec' });
-  };
-
   const inc = function () {
     dispatch({ type: 'inc' });
+  };
+
+  const dec = function () {
+    dispatch({ type: 'dec' });
   };
 
   const defineCount = function (e) {
