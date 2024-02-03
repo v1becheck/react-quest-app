@@ -12,7 +12,7 @@ import FinishScreen from './FinishScreen';
 const initialState = {
   questions: [],
   status: 'loading', // 'loading', 'error', 'ready', 'active', 'finished'
-  currentQuestionIndex: 14,
+  currentQuestionIndex: 0,
   answer: null,
   points: 0,
   highscore: 0,
@@ -50,6 +50,8 @@ function reducer(state, action) {
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
       };
+    case 'restart':
+      return { ...initialState, questions: state.questions, status: 'ready' };
     default:
       throw new Error('Unknown action type');
   }
@@ -106,11 +108,20 @@ export default function App() {
           </>
         )}
         {status === 'finished' && (
-          <FinishScreen
-            points={points}
-            maxPoints={maxPoints}
-            highscore={highscore}
-          />
+          <>
+            <FinishScreen
+              points={points}
+              maxPoints={maxPoints}
+              highscore={highscore}
+              dispatch={dispatch}
+            />
+            <button
+              className='btn btn-ui'
+              onClick={() => dispatch({ type: 'restart' })}
+            >
+              Restart Quiz
+            </button>
+          </>
         )}
       </Main>
     </div>
