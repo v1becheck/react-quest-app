@@ -1,6 +1,141 @@
 {
   "questions": [
     {
+      "question": "Which is the most popular JavaScript framework?",
+      "options": ["Angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which company invented React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "What's the fundamental building block of React apps?",
+      "options": ["Components", "Blocks", "Elements", "Effects"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What's the name of the syntax we use to describe the UI in React components?",
+      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How does data flow naturally in React apps?",
+      "options": [
+        "From parents to children",
+        "From children to parents",
+        "Both ways",
+        "The developers decides"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "How to pass data into a child component?",
+      "options": ["State", "Props", "PropTypes", "Parameters"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "When to use derived state?",
+      "options": [
+        "Whenever the state should not trigger a re-render",
+        "Whenever the state can be synchronized with an effect",
+        "Whenever the state should be accessible to all components",
+        "Whenever the state can be computed from another state variable"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "When do we directly \"touch\" the DOM in React?",
+      "options": [
+        "When we need to listen to an event",
+        "When we need to change the UI",
+        "When we need to add styles",
+        "Almost never"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "In what situation do we use a callback to update state?",
+      "options": [
+        "When updating the state will be slow",
+        "When the updated state is very data-intensive",
+        "When the state update should happen faster",
+        "When the new state depends on the previous state"
+      ],
+      "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "If we pass a function to useState, when will that function be called?",
+      "options": [
+        "On each re-render",
+        "Each time we update the state",
+        "Only on the initial render",
+        "The first time we update the state"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Which hook to use for an API request on the component's initial render?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which variables should go into the useEffect dependency array?",
+      "options": [
+        "Usually none",
+        "All our state variables",
+        "All state and props referenced in the effect",
+        "All variables needed for clean up"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "An effect will always run on the initial render.",
+      "options": [
+        "True",
+        "It depends on the dependency array",
+        "False",
+        "In depends on the code in the effect"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
       "question": "What is the Context API used for in React?",
       "options": [
         "Managing global state",
@@ -159,6 +294,171 @@
       ],
       "correctOption": 0,
       "points": 20
+    },
+    {
+      "question": "What pattern does React Router use to handle navigation?",
+      "options": [
+        "Observer pattern",
+        "Decorator pattern",
+        "Compound component pattern",
+        "Declarative routing pattern"
+      ],
+      "correctOption": 3,
+      "points": 40
+    },
+    {
+      "question": "In Redux, what is an action creator?",
+      "options": [
+        "A function that returns the current state",
+        "A function that dispatches an action",
+        "A function that creates and returns an action",
+        "A component that fires an action"
+      ],
+      "correctOption": 2,
+      "points": 40
+    },
+    {
+      "question": "Which hook is used to access the Redux store's dispatch function?",
+      "options": [
+        "useDispatch()",
+        "useReducer()",
+        "useStore()",
+        "useContext()"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "What does Code Splitting in React help with?",
+      "options": [
+        "Improving readability of the code",
+        "Decreasing bundle size by splitting code into smaller chunks",
+        "Encrypting sensitive code segments",
+        "Splitting the state into multiple reducers"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "What feature does React.lazy() support?",
+      "options": [
+        "Lazy loading of components",
+        "Delayed rendering of components",
+        "Lazy initialization of state",
+        "Background tasks"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "What is the purpose of React's StrictMode?",
+      "options": [
+        "To enforce strict coding practices",
+        "To identify components with unsafe lifecycles",
+        "To encrypt React code",
+        "To enable strict type checking"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "How does React achieve batch updates for multiple state updates?",
+      "options": [
+        "By using the setTimeout function",
+        "By using the useBatch() hook",
+        "Through the event loop mechanism",
+        "React groups multiple state updates into a single re-render for performance"
+      ],
+      "correctOption": 3,
+      "points": 40
+    },
+    {
+      "question": "What is the primary use of React Portal?",
+      "options": [
+        "To render components outside the parent component's DOM hierarchy",
+        "To teleport components to a different location in the app",
+        "To enhance component security",
+        "To increase the rendering speed of components"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "Which of the following is true about server-side rendering (SSR) with React?",
+      "options": [
+        "It renders React components to HTML on the server",
+        "It is used to reduce the size of the React bundle",
+        "It replaces the need for CSS",
+        "It makes React applications less interactive"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "In React, how can you prevent re-renders for components that receive the same props?",
+      "options": [
+        "Using the PureComponent class",
+        "Using the shouldComponentUpdate lifecycle method",
+        "Using the React.memo() higher-order component",
+        "All of the above"
+      ],
+      "correctOption": 3,
+      "points": 40
+    },
+    {
+      "question": "What is the significance of the key prop in a list of React elements?",
+      "options": [
+        "It helps React identify which items have changed, are added, or are removed",
+        "It increases the rendering speed of the list",
+        "It is used to store the value of each item",
+        "It is required for styling the list items"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "Which of the following best describes the term 'side effects' in React?",
+      "options": [
+        "Unintended consequences of an update to the state",
+        "Operations that affect other components and cannot be done during rendering",
+        "Errors that occur during the rendering phase",
+        "Effects that are used to style components"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "What is the main advantage of using TypeScript with React?",
+      "options": [
+        "It adds more complexity to the project",
+        "It provides type checking at compile time, improving code reliability and maintainability",
+        "It automatically tests the React components",
+        "It decreases the bundle size"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "How can you optimize a React application's performance when dealing with large lists of data?",
+      "options": [
+        "By using the useMemo hook to memoize the list",
+        "By using virtualization or windowing",
+        "By storing the list in local storage",
+        "By sending the list to the server for processing"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "What is the main benefit of using React's Suspense component?",
+      "options": [
+        "It suspends the rendering of components that are not yet ready to be displayed",
+        "It reduces the overall size of the React application",
+        "It encrypts sensitive component data",
+        "It increases the rendering speed of components"
+      ],
+      "correctOption": 0,
+      "points": 40
     }
   ]
 }
