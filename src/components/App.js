@@ -14,6 +14,12 @@ import questionsData from '../questions.json';
 
 const SECS_PER_QUESTION = 20;
 
+// TODO:
+// Add selecting number of questions to the start screen
+// Add difficulty selector
+// Add a way to see the highscore
+// Store answers in storage for time travel
+
 const initialState = {
   questions: [],
   status: 'loading', // 'loading', 'error', 'ready', 'active', 'finished'
