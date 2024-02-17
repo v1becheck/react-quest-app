@@ -8,6 +8,7 @@ import Question from './Question';
 import NextButton from './NextButton';
 import Progress from './Progress';
 import FinishScreen from './FinishScreen';
+import questionsData from '../questions.json';
 
 const initialState = {
   questions: [],
@@ -70,10 +71,16 @@ export default function App() {
   );
 
   useEffect(function () {
-    fetch('http://localhost:3001/questions')
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: 'dataReceived', payload: data }))
-      .catch((err) => dispatch({ type: 'dataFailed' }));
+    dispatch({ type: 'dataReceived', payload: questionsData.questions });
+    // fetch('http://localhost:3001/questions')
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     dispatch({ type: 'dataReceived', payload: data });
+    //     console.log(data);
+    //   })
+    //   .catch((err) => dispatch({ type: 'dataFailed' }));
+
+    console.log(questionsData.questions);
   }, []);
 
   return (
