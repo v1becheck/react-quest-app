@@ -1,4 +1,6 @@
 # React Quiz App
 
 useState vs useReducer<br>
-uning json-server to host fake api data from data/questions.json
+using json-server to host fake api data from data/questions.json<br>
+using my-json-server.typicode to host api data<br>
+app hosted: https://react-quest-app.vercel.app/
