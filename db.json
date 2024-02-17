@@ -1,138 +1,163 @@
 {
   "questions": [
     {
-      "question": "Which is the most popular JavaScript framework?",
-      "options": ["Angular", "React", "Svelte", "Vue"],
-      "correctOption": 1,
-      "points": 10
-    },
-    {
-      "question": "Which company invented React?",
-      "options": ["Google", "Apple", "Netflix", "Facebook"],
-      "correctOption": 3,
-      "points": 10
-    },
-    {
-      "question": "What's the fundamental building block of React apps?",
-      "options": ["Components", "Blocks", "Elements", "Effects"],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "What's the name of the syntax we use to describe the UI in React components?",
-      "options": ["FBJ", "Babel", "JSX", "ES2015"],
-      "correctOption": 2,
-      "points": 10
-    },
-    {
-      "question": "How does data flow naturally in React apps?",
+      "question": "What is the Context API used for in React?",
       "options": [
-        "From parents to children",
-        "From children to parents",
-        "Both ways",
-        "The developers decides"
+        "Managing global state",
+        "Handling HTTP requests",
+        "Styling components",
+        "Data fetching"
       ],
       "correctOption": 0,
-      "points": 10
+      "points": 20
     },
     {
-      "question": "How to pass data into a child component?",
-      "options": ["State", "Props", "PropTypes", "Parameters"],
-      "correctOption": 1,
-      "points": 10
-    },
-    {
-      "question": "When to use derived state?",
+      "question": "Which of the following is a correct way to create a custom hook in React?",
       "options": [
-        "Whenever the state should not trigger a re-render",
-        "Whenever the state can be synchronized with an effect",
-        "Whenever the state should be accessible to all components",
-        "Whenever the state can be computed from another state variable"
+        "function useMyHook() {}",
+        "const myHook = function() {}",
+        "let useMyHook = () => {}",
+        "All of the above"
       ],
       "correctOption": 3,
       "points": 30
     },
     {
-      "question": "What triggers a UI re-render in React?",
+      "question": "What does the useMemo hook do?",
       "options": [
-        "Running an effect",
-        "Passing props",
-        "Updating state",
-        "Adding event listeners to DOM elements"
+        "Memorizes a computed value",
+        "Triggers a memory leak warning",
+        "Recomputes values on every render",
+        "Updates the DOM directly"
       ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "Which hook should be used to remember the latest value of a prop or state without triggering a re-render?",
+      "options": ["useState", "useEffect", "useRef", "useCallback"],
       "correctOption": 2,
       "points": 20
     },
     {
-      "question": "When do we directly \"touch\" the DOM in React?",
+      "question": "What is a Higher-Order Component (HOC) in React?",
       "options": [
-        "When we need to listen to an event",
-        "When we need to change the UI",
-        "When we need to add styles",
-        "Almost never"
-      ],
-      "correctOption": 3,
-      "points": 20
-    },
-    {
-      "question": "In what situation do we use a callback to update state?",
-      "options": [
-        "When updating the state will be slow",
-        "When the updated state is very data-intensive",
-        "When the state update should happen faster",
-        "When the new state depends on the previous state"
-      ],
-      "correctOption": 3,
-      "points": 30
-    },
-    {
-      "question": "If we pass a function to useState, when will that function be called?",
-      "options": [
-        "On each re-render",
-        "Each time we update the state",
-        "Only on the initial render",
-        "The first time we update the state"
-      ],
-      "correctOption": 2,
-      "points": 30
-    },
-    {
-      "question": "Which hook to use for an API request on the component's initial render?",
-      "options": ["useState", "useEffect", "useRef", "useReducer"],
-      "correctOption": 1,
-      "points": 10
-    },
-    {
-      "question": "Which variables should go into the useEffect dependency array?",
-      "options": [
-        "Usually none",
-        "All our state variables",
-        "All state and props referenced in the effect",
-        "All variables needed for clean up"
-      ],
-      "correctOption": 2,
-      "points": 30
-    },
-    {
-      "question": "An effect will always run on the initial render.",
-      "options": [
-        "True",
-        "It depends on the dependency array",
-        "False",
-        "In depends on the code in the effect"
+        "A function that takes a component and returns a new component",
+        "A component that renders another component",
+        "A callback function used in hooks",
+        "A method to increase the order of components in the DOM"
       ],
       "correctOption": 0,
       "points": 30
     },
     {
-      "question": "When will an effect run if it doesn't have a dependency array?",
+      "question": "What is Redux primarily used for?",
       "options": [
-        "Only when the component mounts",
-        "Only when the component unmounts",
-        "The first time the component re-renders",
-        "Each time the component is re-rendered"
+        "Managing local state",
+        "Managing global state across components",
+        "Styling components",
+        "Data fetching and caching"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which of the following is a principle of Redux?",
+      "options": [
+        "Single source of truth",
+        "Multiple stores for different data types",
+        "State is mutable",
+        "Actions describe the current state"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What does SSR stand for in web development?",
+      "options": [
+        "Server-Side Rendering",
+        "Single-Page Application",
+        "Server-Side Request",
+        "Stateful Service Rendering"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which of the following best describes 'prop drilling' in React?",
+      "options": [
+        "Passing props from a parent component to a deeply nested child component",
+        "Injecting dependencies into a React component",
+        "A technique for optimizing performance",
+        "Fetching data from an API"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is the primary use case for the useCallback hook?",
+      "options": [
+        "To memoize functions",
+        "To fetch data asynchronously",
+        "To observe changes in the DOM",
+        "To store mutable references"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "How do you optimize performance in a React application with many components?",
+      "options": [
+        "By using the PureComponent class for class components",
+        "By using the React.memo() function for functional components",
+        "By minimizing state changes",
+        "All of the above"
       ],
       "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "What is the main difference between React.Component and React.PureComponent?",
+      "options": [
+        "React.Component does not implement shouldComponentUpdate()",
+        "React.PureComponent automatically shallow compares prop and state changes",
+        "React.Component is only for class components",
+        "React.PureComponent cannot use state"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Which method in a React component should be overridden to stop the component from updating?",
+      "options": [
+        "shouldComponentUpdate",
+        "componentDidUpdate",
+        "componentWillReceiveProps",
+        "getDerivedStateFromProps"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What is the main benefit of using React.Fragment?",
+      "options": [
+        "To keep the DOM clean and avoid extra div wrappers",
+        "To enhance component performance",
+        "To group a list of children without adding extra nodes to the DOM",
+        "Both A and C"
+      ],
+      "correctOption": 3,
+      "points": 20
+    },
+    {
+      "question": "Which API can be used to create a context in React?",
+      "options": [
+        "React.createContext",
+        "React.useContext",
+        "React.provideContext",
+        "React.getContext"
+      ],
+      "correctOption": 0,
       "points": 20
     }
   ]

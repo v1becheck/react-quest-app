@@ -72,12 +72,12 @@ export default function App() {
 
   useEffect(function () {
     // dispatch({ type: 'dataReceived', payload: questionsData.questions });
-    fetch('http://localhost:3001/questions')
+    fetch(
+      'https://my-json-server.typicode.com/v1becheck/react-quest-app/questions'
+    )
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'dataReceived', payload: data }))
       .catch((err) => dispatch({ type: 'dataFailed' }));
-
-    console.log(questionsData.questions);
   }, []);
 
   return (
