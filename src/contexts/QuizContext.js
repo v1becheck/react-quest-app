@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useEffect } from "react";
+import { createContext, useContext, useReducer, useEffect } from 'react';
 
 const QuizContext = createContext();
 
@@ -8,7 +8,7 @@ const initialState = {
   questions: [],
 
   // 'loading', 'error', 'ready', 'active', 'finished'
-  status: "loading",
+  status: 'loading',
   index: 0,
   answer: null,
   points: 0,
@@ -18,24 +18,24 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case "dataReceived":
+    case 'dataReceived':
       return {
         ...state,
         questions: action.payload,
-        status: "ready",
+        status: 'ready',
       };
-    case "dataFailed":
+    case 'dataFailed':
       return {
         ...state,
-        status: "error",
+        status: 'error',
       };
-    case "start":
+    case 'start':
       return {
         ...state,
-        status: "active",
+        status: 'active',
         secondsRemaining: state.questions.length * SECS_PER_QUESTION,
       };
-    case "newAnswer":
+    case 'newAnswer':
       const question = state.questions.at(state.index);
 
       return {
@@ -46,27 +46,27 @@ function reducer(state, action) {
             ? state.points + question.points
             : state.points,
       };
-    case "nextQuestion":
+    case 'nextQuestion':
       return { ...state, index: state.index + 1, answer: null };
-    case "finish":
+    case 'finish':
       return {
         ...state,
-        status: "finished",
+        status: 'finished',
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
       };
-    case "restart":
-      return { ...initialState, questions: state.questions, status: "ready" };
+    case 'restart':
+      return { ...initialState, questions: state.questions, status: 'ready' };
 
-    case "tick":
+    case 'tick':
       return {
         ...state,
         secondsRemaining: state.secondsRemaining - 1,
-        status: state.secondsRemaining === 0 ? "finished" : state.status,
+        status: state.secondsRemaining === 0 ? 'finished' : state.status,
       };
 
     default:
-      throw new Error("Action unkonwn");
+      throw new Error('Action unkonwn');
   }
 }
 
@@ -83,10 +83,14 @@ function QuizProvider({ children }) {
   );
 
   useEffect(function () {
-    fetch("http://localhost:9000/questions")
+    fetch('https://my-json-server.typicode.com/v1becheck/react-quest-app/db')
       .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch((err) => dispatch({ type: "dataFailed" }));
+      .then((data) => dispatch({ type: 'dataReceived', payload: data }))
+      .catch((err) => dispatch({ type: 'dataFailed' }));
+    // fetch("http://localhost:9000/questions")
+    //   .then((res) => res.json())
+    //   .then((data) => dispatch({ type: "dataReceived", payload: data }))
+    //   .catch((err) => dispatch({ type: "dataFailed" }));
   }, []);
 
   return (
@@ -113,7 +117,7 @@ function QuizProvider({ children }) {
 function useQuiz() {
   const context = useContext(QuizContext);
   if (context === undefined)
-    throw new Error("QuizContext was used outside of the QuizProvider");
+    throw new Error('QuizContext was used outside of the QuizProvider');
   return context;
 }
 
