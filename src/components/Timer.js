@@ -1,25 +1,27 @@
-import React, { useEffect } from 'react';
+import { useEffect } from "react";
+import { useQuiz } from "../contexts/QuizContext";
 
-function Timer({ dispatch, secondsLeft }) {
-  const mins = Math.floor(secondsLeft / 60);
-  const seconds = secondsLeft % 60;
+function Timer() {
+  const { dispatch, secondsRemaining } = useQuiz();
+
+  const mins = Math.floor(secondsRemaining / 60);
+  const seconds = secondsRemaining % 60;
 
   useEffect(
     function () {
       const id = setInterval(function () {
-        dispatch({ type: 'timerTick' });
+        dispatch({ type: "tick" });
       }, 1000);
 
-      return function () {
-        clearInterval(id);
-      };
+      return () => clearInterval(id);
     },
     [dispatch]
   );
+
   return (
-    <div className='timer'>
-      {mins < 10 ? '0' : ''}
-      {mins}:{seconds < 10 ? '0' : ''}
+    <div className="timer">
+      {mins < 10 && "0"}
+      {mins}:{seconds < 10 && "0"}
       {seconds}
     </div>
   );

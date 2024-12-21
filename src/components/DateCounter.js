@@ -1,21 +1,23 @@
-import { useReducer } from 'react';
+import { useReducer } from "react";
 
 const initialState = { count: 0, step: 1 };
 
 function reducer(state, action) {
+  console.log(state, action);
+
   switch (action.type) {
-    case 'inc':
-      return { ...state, count: state.count + state.step };
-    case 'dec':
+    case "dec":
       return { ...state, count: state.count - state.step };
-    case 'setCount':
+    case "inc":
+      return { ...state, count: state.count + state.step };
+    case "setCount":
       return { ...state, count: action.payload };
-    case 'setStep':
+    case "setStep":
       return { ...state, step: action.payload };
-    case 'reset':
+    case "reset":
       return initialState;
     default:
-      throw new Error('Unknown action type');
+      throw new Error("Unknown action");
   }
 }
 
@@ -24,36 +26,36 @@ function DateCounter() {
   const { count, step } = state;
 
   // This mutates the date object.
-  const date = new Date('june 21 2027');
+  const date = new Date("june 21 2027");
   date.setDate(date.getDate() + count);
 
-  const inc = function () {
-    dispatch({ type: 'inc' });
+  const dec = function () {
+    dispatch({ type: "dec" });
   };
 
-  const dec = function () {
-    dispatch({ type: 'dec' });
+  const inc = function () {
+    dispatch({ type: "inc" });
   };
 
   const defineCount = function (e) {
-    dispatch({ type: 'setCount', payload: Number(e.target.value) });
+    dispatch({ type: "setCount", payload: Number(e.target.value) });
   };
 
   const defineStep = function (e) {
-    dispatch({ type: 'setStep', payload: Number(e.target.value) });
+    dispatch({ type: "setStep", payload: Number(e.target.value) });
   };
 
   const reset = function () {
-    dispatch({ type: 'reset' });
+    dispatch({ type: "reset" });
   };
 
   return (
-    <div className='counter'>
+    <div className="counter">
       <div>
         <input
-          type='range'
-          min='0'
-          max='10'
+          type="range"
+          min="0"
+          max="10"
           value={step}
           onChange={defineStep}
         />
@@ -74,5 +76,4 @@ function DateCounter() {
     </div>
   );
 }
-
 export default DateCounter;
