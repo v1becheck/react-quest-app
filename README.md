@@ -3,7 +3,7 @@
 Test your React knowledge with series of questions.<br>
 
 Tech:<br>
-useState vs useReducer<br>
+useState vs useReducer and Context API<br>
 using json-server to host fake api data from data/questions.json<br>
 using my-json-server.typicode to host api data (https://my-json-server.typicode.com/)<br>
 webapp hosted: https://react-quest-app.vercel.app/
