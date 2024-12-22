@@ -470,6 +470,899 @@
       ],
       "correctOption": 0,
       "points": 40
+    },
+    {
+      "question": "Which lifecycle method is invoked immediately after a React component is added to the DOM?",
+      "options": [
+        "componentDidMount",
+        "componentWillMount",
+        "componentDidUpdate",
+        "componentWillUnmount"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What does the useLayoutEffect hook do differently than useEffect?",
+      "options": [
+        "It doesn't run on the initial render",
+        "It runs synchronously after all DOM mutations but before the browser paints",
+        "It runs asynchronously after every render",
+        "It only runs when dependencies change"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What is the purpose of getDerivedStateFromProps?",
+      "options": [
+        "To safely apply side effects after updating state",
+        "To replace componentWillReceiveProps for deriving state changes from props",
+        "To schedule a manual update to the DOM",
+        "To memoize functions"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "How do Error Boundaries help in React?",
+      "options": [
+        "They catch JavaScript errors anywhere in their child component tree",
+        "They automatically rerender on errors",
+        "They remove the need for try/catch blocks",
+        "They keep the app from ever crashing"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "Which method in a class component is used to catch errors in child components in React 16+?",
+      "options": [
+        "componentDidCatch",
+        "componentDidHandleError",
+        "componentWillCatch",
+        "renderError"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "Which hook is used to read and subscribe to context values in functional components?",
+      "options": ["useReducer", "useLayoutEffect", "useContext", "useMemo"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is a 'controlled component' in the context of forms in React?",
+      "options": [
+        "A component that manages its own state internally",
+        "A component that relies on a Redux store for its data",
+        "A component where form data is handled by the component's state",
+        "A component that is wrapped in StrictMode"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is an 'uncontrolled component' in React?",
+      "options": [
+        "A component that uses callback refs to handle data",
+        "A component that maintains its own internal state for form data, using the DOM directly",
+        "A component that does not render anything",
+        "A component with no lifecycle methods"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Which of the following best describes the children prop in React?",
+      "options": [
+        "Any direct descendent of a component in the component tree",
+        "The root node of the entire application",
+        "A special prop that allows passing arbitrary elements to be rendered by a component",
+        "A method that handles child nodes"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What does the term 'hydration' mean in React?",
+      "options": [
+        "Initializing the state in a component",
+        "Reusing server-rendered HTML and attaching event handlers on the client",
+        "Rendering additional DOM nodes when needed",
+        "Retrieving data from an API before rendering"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "Which property on the event object would you check to see which key was pressed when handling keyboard events in React?",
+      "options": ["event.keyCode", "event.which", "event.key", "event.pressed"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the primary benefit of using the useImperativeHandle hook?",
+      "options": [
+        "To limit re-renders in a component",
+        "To customize the instance value exposed to parent components when using ref",
+        "To create side effects inside a component safely",
+        "To handle errors in child components"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "Which method is used in React Router for dynamic routing?",
+      "options": [
+        "BrowserRouter",
+        "DynamicRouter",
+        "MemoryRouter",
+        "HashRouter"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "How can you ensure that a useEffect does not run on the initial render but does run on subsequent updates?",
+      "options": [
+        "By adding an empty array as dependency",
+        "By comparing a ref or state in the effect and conditionally running the logic",
+        "By using useLayoutEffect instead",
+        "By calling the effect manually"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What is the default behavior of a Link component in React Router?",
+      "options": [
+        "Performs a full page reload",
+        "Pushes a new entry onto the history stack without a full page reload",
+        "Replaces the current entry in the history stack",
+        "Triggers an API call"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which hook is commonly used to store a mutable value that doesn't cause a re-render when updated?",
+      "options": ["useCallback", "useEffect", "useRef", "useReducer"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the main purpose of the useTransition hook in React 18+?",
+      "options": [
+        "To fetch data in the background",
+        "To mark state updates as non-urgent and show a pending state",
+        "To manage large forms more efficiently",
+        "To replace React Router transitions"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "How do you handle global side effects (e.g., adding a global event listener) in React?",
+      "options": [
+        "Use a class component with componentDidMount",
+        "Use useEffect with an empty dependency array for setup, and return a cleanup function",
+        "Attach it directly to the window object in the render function",
+        "Use the context API to attach events"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What is the purpose of a 'fallback' prop when using React.Suspense?",
+      "options": [
+        "To specify the fallback error boundary for uncaught exceptions",
+        "To provide a placeholder (usually a loading indicator) while a lazy component loads",
+        "To handle fallback for older browsers that do not support React",
+        "To replace the default boundary for React errors"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Which of the following techniques can be used to avoid prop drilling in React?",
+      "options": [
+        "Use React Context",
+        "Use local state in each component",
+        "Use componentDidMount instead of passing props",
+        "Use only function components"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is a common pattern for handling multiple form inputs in React with one piece of state?",
+      "options": [
+        "Store all inputs in a single state object and update based on the event target's name attribute",
+        "Use multiple states for each input field",
+        "Use Redux to store form values",
+        "Use React context to store form values globally"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "How can you measure performance in a React application?",
+      "options": [
+        "By analyzing the console logs",
+        "By using the React DevTools Profiler",
+        "By using the default browser inspector",
+        "By writing performance tests in Jest"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Which of the following best describes the role of keys in React lists?",
+      "options": [
+        "They optimize rendering by preventing each element from re-rendering",
+        "They help track the identity of each item to help React decide which items have changed",
+        "They allow you to store extra data on each element",
+        "They are used only for styling CSS classes"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the main purpose of the forwardRef function in React?",
+      "options": [
+        "To pass refs from a child component back to its parent",
+        "To create a custom hook for referencing DOM elements",
+        "To allow a parent component to directly access a child's ref",
+        "To memoize references for performance optimizations"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "Which React feature allows components to render placeholder content while asynchronous tasks are in progress?",
+      "options": [
+        "React.lazy",
+        "React.Suspense",
+        "useDeferredValue",
+        "useTransition"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What is the recommended way to manage focus in a React component for accessibility?",
+      "options": [
+        "Directly manipulate the DOM in componentDidMount",
+        "Use a ref to the DOM element and set focus in useEffect",
+        "Use a global event listener for focus changes",
+        "Use a third-party library for all focus management"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Which React hook is useful when you need to memoize the definition of a function to avoid unnecessary re-renders?",
+      "options": ["useMemo", "useRef", "useCallback", "useEffect"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the purpose of getSnapshotBeforeUpdate in class components?",
+      "options": [
+        "To fire right before a component unmounts",
+        "To capture some DOM information (e.g., scroll position) before it changes",
+        "To update the state based on props",
+        "To execute side effects after rendering"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "Which hook can you use for form validation logic without relying on external libraries?",
+      "options": [
+        "useValidation",
+        "useValidateForm",
+        "useReducer or useState with custom logic",
+        "useFormHook"
+      ],
+      "correctOption": 2,
+      "points": 30
+    },
+    {
+      "question": "What is Reconciliation in React?",
+      "options": [
+        "The process of merging two components into one",
+        "The process by which React updates the DOM by comparing the current and previous renders",
+        "The method of combining multiple states into a single store",
+        "A technique to handle errors in child components"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "In Next.js, getServerSideProps is used for what purpose?",
+      "options": [
+        "To fetch data client-side only",
+        "To fetch data and render on the server for each request",
+        "To define custom API routes",
+        "To specify page-level styles"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "Why might you use React.Children.map instead of the regular JavaScript map?",
+      "options": [
+        "It performs better in all cases",
+        "It preserves the identity of each child element and ensures each child is a valid React element",
+        "It automatically assigns keys to each child",
+        "It is required for React lists"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What does the useDebugValue hook do?",
+      "options": [
+        "Provides a debug value for custom hooks to show in React DevTools",
+        "Throws an error for debugging",
+        "Enables debugging of state updates in the console",
+        "Gives a performance summary in the console"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "In a typical React + Redux application, which piece is responsible for updating the store?",
+      "options": [
+        "The reducer based on the action dispatched",
+        "The React component's setState method",
+        "The middleware, which modifies the store directly",
+        "The store itself automatically updates"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is the main benefit of using memoized selectors (e.g., Reselect) in Redux?",
+      "options": [
+        "They reduce the size of the Redux store",
+        "They allow you to create derived data that is cached, improving performance",
+        "They automatically fetch data from APIs",
+        "They prevent the need for reducers"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "Which statement is true regarding React's one-way data flow?",
+      "options": [
+        "Data can only flow from children to parent components",
+        "Data can flow in both directions by default",
+        "Props move down the component tree and events bubble up",
+        "Props are always read-write in child components"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the main use of the StrictMode in React?",
+      "options": [
+        "To run the application in production mode",
+        "To activate advanced dev tools logging",
+        "To detect unsafe lifecycles and deprecated APIs",
+        "To handle code splitting"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which React hook can be used to implement an infinite scroll feature efficiently?",
+      "options": [
+        "useEffect combined with intersection observers or scroll events",
+        "useState for counting items",
+        "useMemo for caching the scroll position",
+        "useCallback for capturing scroll events"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "When would you use the ReactDOMServer.renderToString method?",
+      "options": [
+        "To render components into a portal",
+        "To perform server-side rendering for a React application",
+        "To convert HTML to JSX",
+        "To quickly debug component structure in the console"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "How does React handle inline event handlers, such as onClick?",
+      "options": [
+        "It uses the old-style event registration (attachEvent in IE)",
+        "It uses event delegation on the root element",
+        "It creates a new event listener for each DOM node",
+        "It doesn't allow inline event handlers"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What is the recommended approach to conditionally apply class names in a React component?",
+      "options": [
+        "Concatenate strings manually",
+        "Use libraries like classnames or clsx for readability",
+        "Use separate if statements to determine which classes to add",
+        "Use inline styles instead"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which Redux method is used to dispatch an action to the store?",
+      "options": [
+        "store.getState()",
+        "store.dispatch()",
+        "store.subscribe()",
+        "store.reducer()"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the main purpose of a custom Babel configuration in a React project?",
+      "options": [
+        "To add polyfills for older browsers automatically",
+        "To transform JSX and optionally apply other JavaScript transformations",
+        "To handle CSS and image imports natively",
+        "To manage environment variables"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which statement about React keys is correct?",
+      "options": [
+        "Keys should be unique among all elements in the entire app",
+        "Keys help React identify which items have changed and they should be unique among siblings",
+        "Keys are accessible as props in child components by default",
+        "Keys are only used in development mode"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the difference between a function component and a class component in React?",
+      "options": [
+        "Class components do not support lifecycle methods",
+        "Function components can store local state without hooks",
+        "Class components can use lifecycle methods and have their own state without hooks",
+        "Function components must return null"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "What does 'lifting state up' mean in React?",
+      "options": [
+        "Placing state in higher-order components for performance",
+        "Storing all state in Redux for global access",
+        "Moving state to the closest common ancestor of components that need it",
+        "Using the useRef hook to keep state in the DOM"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which attribute would you use on an HTML <input> element to read its value in React?",
+      "options": ["checked", "value", "defaultValue", "onInput"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "How do you stop an event from propagating in React?",
+      "options": [
+        "event.preventDefault()",
+        "event.stopPropagation()",
+        "Return false from the event handler",
+        "Remove the event listener manually"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the recommended solution for writing async logic that interacts with the Redux store?",
+      "options": [
+        "Redux Thunk or other middleware",
+        "Write it directly in the reducer",
+        "Use componentDidMount lifecycle method",
+        "Use only synchronous actions"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which React hook allows you to apply side effects in function components?",
+      "options": ["useSideEffect", "useMemo", "useReducer", "useEffect"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "When using the React Router <Route> component, which prop specifies the component to be rendered when the path matches?",
+      "options": ["component", "render", "exact", "path"],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which command is used to install React Router in a React project?",
+      "options": [
+        "npm install react-router-dom",
+        "npm install react-router",
+        "npm install react-router-native",
+        "npm install router"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What does the 'exact' prop do on a <Route> in React Router v5?",
+      "options": [
+        "Ignores any trailing parameters",
+        "Requires that the path exactly matches the URL",
+        "Allows partial matching of URLs",
+        "Redirects to a default route if not exact"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which hook lets you directly interact with a DOM element in a function component?",
+      "options": ["useDOM", "useRef", "useElement", "useLayoutEffect"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "In a controlled form component, how do you typically update the value of an input?",
+      "options": [
+        "Using the event.target.checked property",
+        "By using the event.defaultValue property",
+        "By calling setState or useState setter in the onChange handler",
+        "By editing the DOM directly"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which of the following statements about React PropTypes is true?",
+      "options": [
+        "They are used at runtime to type-check props in development",
+        "They are a form of compile-time type checking",
+        "They are a replacement for TypeScript",
+        "They cannot check for array types"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is the purpose of the defaultProps property in a React component?",
+      "options": [
+        "To define the default CSS styling for a component",
+        "To create fallback values for props if they aren't provided",
+        "To make props read-only",
+        "To define prop types for a component"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which array method is commonly used in React to render a list of components?",
+      "options": ["forEach", "map", "filter", "reduce"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Why is it not recommended to mutate the state directly in React?",
+      "options": [
+        "It works fine, there's no issue with mutating state in React",
+        "Because it will trigger multiple re-renders",
+        "Because React won't detect the change and won't re-render",
+        "Because it causes memory leaks"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "In React Router v6, what is used instead of Switch to group routes?",
+      "options": ["Routes", "RouterGroup", "ReplaceSwitch", "RouteSet"],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which lifecycle method can be used to perform clean-up tasks like removing event listeners?",
+      "options": [
+        "componentWillUnmount",
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentDidCatch"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which method is called right before the component is removed from the DOM?",
+      "options": [
+        "componentWillMount",
+        "componentWillUnmount",
+        "componentWillUpdate",
+        "componentDidUnmount"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which version of React introduced Hooks?",
+      "options": ["16.3", "16.8", "15.6", "17.0"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the difference between useReducer and Redux?",
+      "options": [
+        "useReducer is built into React for local state management while Redux is a separate library for global state",
+        "useReducer is for asynchronous state updates, Redux is for synchronous",
+        "They are identical in implementation and features",
+        "There is no difference, both are the same"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What does the optional chaining operator (?.) help with in React code?",
+      "options": [
+        "It automatically fetches data if the property is not null",
+        "It throws an error if the property does not exist",
+        "It prevents an error by returning undefined if an intermediate property is null or undefined",
+        "It helps in debugging"
+      ],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "When using React.memo, how does React determine if a re-render is necessary?",
+      "options": [
+        "It shallowly compares the old and new props",
+        "It does a deep comparison of all props",
+        "It compares the component's state",
+        "It always prevents re-renders"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "Which statement about JSX is true?",
+      "options": [
+        "JSX is valid JavaScript syntax",
+        "JSX must be converted to JavaScript by a compiler like Babel",
+        "JSX eliminates the need for props",
+        "JSX can only render text nodes"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which attribute is used to specify that a <script> can be executed asynchronously in an HTML page for a React app?",
+      "options": ["async", "defer", "type=\"module\"", "execute"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the purpose of dangerouslySetInnerHTML in React?",
+      "options": [
+        "To sanitize HTML content before rendering",
+        "To render HTML content directly without sanitizing it (used with caution)",
+        "To transform the HTML into JSX",
+        "To escape user-generated content"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "How can you optimize images in a React application for performance?",
+      "options": [
+        "Using lazy loading techniques (e.g., react-lazyload-image) or React.Suspense for images",
+        "Always embed images as base64 data URIs",
+        "Use dangerouslySetInnerHTML",
+        "Store all images in Redux state"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What is the main advantage of code splitting a React application?",
+      "options": [
+        "Decreased bundle size and faster page loads",
+        "Eliminates the need for server-side rendering",
+        "Removes all dependencies from node_modules",
+        "Automatically handles all caching"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which statement about React Router's useParams hook is true?",
+      "options": [
+        "It can only be used in class components",
+        "It returns an array of path parameters",
+        "It returns an object of key/value pairs of the dynamic parameters in the URL",
+        "It returns a boolean indicating if the route matched"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "When using concurrent features in React 18, how can you mark a state update as non-urgent?",
+      "options": [
+        "By using useCallback",
+        "By using startTransition from react",
+        "By using React.lazy",
+        "By deferring the state with requestIdleCallback"
+      ],
+      "correctOption": 1,
+      "points": 40
+    },
+    {
+      "question": "Which React feature helps you avoid passing callbacks down multiple levels just to trigger a state change in a distant ancestor component?",
+      "options": ["useEffect", "React Context", "PropTypes", "JSX"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the purpose of the index route in React Router v6?",
+      "options": [
+        "It defines a default child route when the path fully matches the parent",
+        "It replaces the 404 page if the path isn't found",
+        "It merges multiple routes into one",
+        "It is used only for dynamic paths"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which tool helps measure real user performance metrics (like FID, LCP, CLS) in a React application?",
+      "options": ["React Profiler", "Web Vitals", "Redux DevTools", "ESLint"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Which React method is used to manually trigger a re-render of a class component?",
+      "options": [
+        "this.update()",
+        "this.forceUpdate()",
+        "this.refresh()",
+        "this.componentDidMount()"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Why might you use a function as a child (render props pattern) in React?",
+      "options": [
+        "To allow state or behavior to be shared between components without using hooks",
+        "To automatically pass props to a child component",
+        "To reduce the code duplication in Redux",
+        "To force a re-render in child components"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "Which React hook allows you to read the value of a Context in a functional component?",
+      "options": ["useReducer", "useState", "useContext", "useEffect"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "How would you describe the main benefit of the custom hook pattern?",
+      "options": [
+        "It allows for stateful logic to be reused across multiple components",
+        "It replaces Redux entirely",
+        "It automatically handles DOM events",
+        "It memoizes all components by default"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is the recommended place to store sensitive configuration data like API keys in a React application?",
+      "options": [
+        "Inside the component's state",
+        "As environment variables that are replaced at build time",
+        "Directly in the source code constants",
+        "In the browser's localStorage"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Which hook lets you throttle or debounce input changes in React to improve performance?",
+      "options": [
+        "useEffect with custom logic or external libs like lodash/throttle or debounce",
+        "useThrottle or useDebounce built into React",
+        "useRef automatically handles debouncing",
+        "useCallback automatically handles throttling"
+      ],
+      "correctOption": 0,
+      "points": 40
+    },
+    {
+      "question": "What is the main benefit of having a 'container' versus 'presentational' components approach?",
+      "options": [
+        "It ensures that all components have their own logic and styling",
+        "It separates data fetching or state management logic from UI rendering",
+        "It replaces the need for contexts",
+        "It merges CSS and logic together"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "How do you ensure a child component updates if a parent passes a new object prop, but the object is always created inline in render?",
+      "options": [
+        "Use React.memo and pass a stable reference (e.g., using useMemo) for the object",
+        "Use a class component with shouldComponentUpdate always returning false",
+        "Use a callback ref",
+        "It doesn't matter; React always re-renders the child"
+      ],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "Which statement about useState is correct?",
+      "options": [
+        "It can only store strings",
+        "You can call it conditionally in the component body",
+        "You must call it in the top level of the component",
+        "It triggers a re-render only after all hooks are called"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "How can you avoid excessive renders caused by updating state on every keystroke in a text input?",
+      "options": [
+        "Only allow every other keystroke to update the state",
+        "Use debouncing or throttling logic in the onChange handler",
+        "Use a class component instead of a functional component",
+        "There's no way to avoid this"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the correct way to use the spread operator in JSX to pass all props to a component?",
+      "options": [
+        "<MyComponent {...props} />",
+        "<MyComponent @@props />",
+        "<MyComponent !!!props />",
+        "<MyComponent spread={props} />"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Which hook can help you easily manage a field's value and onChange handler for a form?",
+      "options": [
+        "useInput",
+        "useEffect",
+        "useState",
+        "React doesn't provide a built-in specialized form hook; you'd typically use useState or useReducer"
+      ],
+      "correctOption": 3,
+      "points": 30
     }
   ]
 }

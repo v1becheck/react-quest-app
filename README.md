@@ -10,3 +10,4 @@ webapp hosted: https://react-quest-app.vercel.app/
 <br><br>--------------------------------------------<br><br>
 Update 1.1.0: Added Context API to manage state
 Update 1.1.1: Used local document to store questions to avoid Typicode 10KB db.json issue
+Update 1.1.2: Added more questions
