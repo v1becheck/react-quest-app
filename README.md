@@ -1,6 +1,6 @@
 # React Quiz App
 
-Test your React knowledge with 134 questions.<br>
+Test your knowledge of React with 134 questions.<br>
 
 Tech:<br>
 useState vs useReducer and Context API<br>
