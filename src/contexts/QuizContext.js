@@ -1,4 +1,5 @@
 import { createContext, useContext, useReducer, useEffect } from 'react';
+import questionsData from '../questions.json';
 
 const QuizContext = createContext();
 
@@ -83,12 +84,17 @@ function QuizProvider({ children }) {
   );
 
   useEffect(function () {
-    fetch('https://my-json-server.typicode.com/v1becheck/react-quest-app/db')
-      .then((res) => res.json())
-      .then((data) =>
-        dispatch({ type: 'dataReceived', payload: data.questions })
-      )
-      .catch((err) => dispatch({ type: 'dataFailed' }));
+    dispatch({ type: 'dataReceived', payload: questionsData.questions });
+
+    // typicode
+    // fetch('https://my-json-server.typicode.com/v1becheck/react-quest-app/db')
+    //   .then((res) => res.json())
+    //   .then((data) =>
+    //     dispatch({ type: 'dataReceived', payload: data.questions })
+    //   )
+    //   .catch((err) => dispatch({ type: 'dataFailed' }));
+
+    //json-server
     // fetch("http://localhost:9000/questions")
     //   .then((res) => res.json())
     //   .then((data) => dispatch({ type: "dataReceived", payload: data }))
